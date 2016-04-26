@@ -1,23 +1,21 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
+import firebase from 'firebase';
+import angularFire from 'angularfire';
 
-import account from './modules/account';
-import chats from './modules/chats';
-import dash from './modules/dash';
-import tabs from './modules/tabs';
+import movies from './modules/movies';
 
 let App = angular.module('app', [
   'ionic',
   'ui.router',
-  'tabs',
-  'account',
-  'chats',
-  'dash'
+  'firebase',
+
+  'jb.movies'
 ]);
 
 function config($urlRouterProvider) {
-  $urlRouterProvider.otherwise("/tab/dash");
+  $urlRouterProvider.otherwise("/movies");
 }
 
 App.config(config);

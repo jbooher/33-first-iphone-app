@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-nav-title>Movies</ion-nav-title>
+  <ion-nav-buttons side="primary">
+    <button
+      class="button button-icon icon ion-ios-minus-outline"
+      ng-click="moviesCtrl.toggleDelete()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button
+      class="button button-balanced"
+      ng-click="moviesCtrl.showForm()">Add</button>
+
+  </ion-nav-buttons>
+  <ion-content>
+
+    <ion-list show-delete="moviesCtrl.showDelete">
+      <ion-item class="item-thumbnail-left" ng-repeat="movie in moviesCtrl.movies">
+        <img ng-src="{{ movie.Poster }}">
+        <h2>{{ movie.Title }}</h2>
+        <p>{{ movie.Plot }}</p>
+        <ion-delete-button
+          class="ion-minus-circled"
+          ng-click="moviesCtrl.deleteMovie(movie)">
+        </ion-delete-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-modal-view>
+   <ion-header-bar>
+     <h1 class="title">Form</h1>
+   </ion-header-bar>
+   <ion-content>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Movie Name</span>
+        <input type="text" placeholder="Movie Name" ng-model="moviesCtrl.movie">
+      </label>
+
+      <button class="button button-full button-positive" ng-click="moviesCtrl.addMovie()">
+        Add Movie
+      </button>
+    </div>
+    </ion-content>
+ </ion-modal-view>
